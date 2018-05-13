@@ -8,6 +8,7 @@ const initialState = fromJS({
 
 export const tabsReducer = (state = initialState, action) => {
     const { payload, type } = action;
+    
     switch (type) {
         case CHANGE_ACTIVE_TAB:
             return state.merge({ activeTab: payload });

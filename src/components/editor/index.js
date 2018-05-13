@@ -7,6 +7,7 @@ import 'brace/theme/monokai';
 const Editor = ({ json }) => (
     <AceEditor
         mode="javascript"
+        readOnly
         theme="monokai"
         name="json-editor"
         editorProps={{$blockScrolling: true}}

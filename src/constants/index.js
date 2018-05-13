@@ -6,12 +6,9 @@ export const CATEGORIES = {
     METADATA: 'METADATA'
 };
 
-export const TABS_ENUM = {
-    0: CATEGORIES.DEVICE_INFO,
-    1: CATEGORIES.SENSORS,
-    2: CATEGORIES.SETTINGS,
-    3: CATEGORIES.COMMANDS,
-    4: CATEGORIES.METADATA
+export const DATA_TYPES = {
+    STRING: 'STRING',
+    OBJECT: 'OBJECT'
 };
 
 export const FORMATS = {
@@ -21,11 +18,6 @@ export const FORMATS = {
     DATE_TIME: 'DATE_TIME',
     CDATA: 'CDATA',
     URI: 'URI'
-};
-
-export const DATA_TYPES = {
-    STRING: 'STRING',
-    OBJECT: 'OBJECT'
 };
 
 export const MOCK_ATTRIBUTES = [
@@ -81,4 +73,12 @@ export const SEED_ATTRIBUTE = {
     accuracy: null,
     defaultValue: '',
     device: ''
+};
+
+export const TABS_ENUM = {
+    0: CATEGORIES.DEVICE_INFO,
+    1: CATEGORIES.SENSORS,
+    2: CATEGORIES.SETTINGS,
+    3: CATEGORIES.COMMANDS,
+    4: CATEGORIES.METADATA
 };

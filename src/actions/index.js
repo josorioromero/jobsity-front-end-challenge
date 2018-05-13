@@ -1,3 +1,4 @@
+// @constants
 import { TABS_ENUM } from '../constants';
 
 export const CHANGE_ACTIVE_TAB = 'CHANGE_ACTIVE_TAB';

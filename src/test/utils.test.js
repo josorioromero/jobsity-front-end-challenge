@@ -1,3 +1,4 @@
+// @utils
 import { getElement } from '../utils';
 
 const MOCK_COLLECTION = [

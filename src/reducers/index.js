@@ -1,4 +1,7 @@
+// @vendors
 import { combineReducers } from 'redux';
+
+// @reducers
 import { attributesReducer } from './attributes';
 import { tabsReducer } from './tabs';
 

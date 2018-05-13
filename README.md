@@ -37,8 +37,9 @@ Front end challenge for Jobsity
 
 4. Build JS
 	* Run the command `npm run build` to obtain the built version of the project for production purposes.
+    
 
-# TROUBLESHOOTING
+# Troubleshooting
 The only known issue with this project occurs when running the test suite on MAC OS Sierra or higher versions. You should [install Watchman through Brew](https://facebook.github.io/watchman/docs/install.html) and the problem will be fixed.
 
 ****

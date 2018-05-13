@@ -2,10 +2,10 @@
 import { fromJS } from 'immutable';
 
 // @actions
-import { CHANGE_ACTIVE_TAB } from '../actions';
+import { CHANGE_ACTIVE_TAB } from '../../actions';
 
 // @constants
-import { TABS_ENUM } from '../constants';
+import { TABS_ENUM } from '../../constants';
 
 const initialState = fromJS({
     activeTab: TABS_ENUM[0]

@@ -5,13 +5,13 @@ import { fromJS } from 'immutable';
 import {
     CREATE_NEW_ATTRIBUTE,
     LOAD_DEFAULT_ATTRIBUTES
-} from '../actions';
+} from '../../actions';
 
 // @constants
 import {
     MOCK_ATTRIBUTES,
     SEED_ATTRIBUTE
-} from '../constants';
+} from '../../constants';
 
 const initialState = fromJS({
     attributesList: MOCK_ATTRIBUTES

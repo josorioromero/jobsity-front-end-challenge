@@ -36,7 +36,7 @@ Front end challenge for Jobsity
 	* Run the command `npm run watch-css` to build all the SASS files to css files. This command is also executed when you run `npm start`.
 
 4. Build JS
-	* Run the command `nm run build` to obtain the built version of the project for production purposes.
+	* Run the command `npm run build` to obtain the built version of the project for production purposes.
 
 # TROUBLESHOOTING
 The only known issue with this project occurs when running the test suite on MAC OS Sierra or higher versions. You should [install Watchman through Brew](https://facebook.github.io/watchman/docs/install.html) and the problem will be fixed.

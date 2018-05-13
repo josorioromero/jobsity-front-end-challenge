@@ -1,15 +1,18 @@
+// @vendors
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+
+// @actions
 import { loadDefaultAttributes } from './actions';
 
+// components
 import { Cell, Grid } from 'react-md';
-
 import TabContainer from './containers/tab';
-
 import Editor from './components/editor';
 
+// styles
 import './App.css';
 
 class App extends Component {

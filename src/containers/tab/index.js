@@ -1,7 +1,17 @@
+// @vendors
 import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { Button, TabsContainer, Tabs, Tab } from 'react-md';
+
+// @components
+import {
+    Button,
+    Tab,
+    Tabs,
+    TabsContainer
+} from 'react-md';
+
+// @actions
 import { changeActiveTab, createNewAttribute } from '../../actions';
 
 const TabContainer = ({

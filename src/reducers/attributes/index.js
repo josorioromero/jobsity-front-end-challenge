@@ -1,6 +1,17 @@
-import { CREATE_NEW_ATTRIBUTE, LOAD_DEFAULT_ATTRIBUTES } from '../actions';
-import { CATEGORIES, DATA_TYPES, FORMATS, MOCK_ATTRIBUTES, SEED_ATTRIBUTE } from '../constants';
+// @vendors
 import { fromJS } from 'immutable';
+
+// @actions
+import {
+    CREATE_NEW_ATTRIBUTE,
+    LOAD_DEFAULT_ATTRIBUTES
+} from '../../actions';
+
+// @constants
+import {
+    MOCK_ATTRIBUTES,
+    SEED_ATTRIBUTE
+} from '../../constants';
 
 const initialState = fromJS({
     attributesList: MOCK_ATTRIBUTES

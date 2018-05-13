@@ -13,6 +13,7 @@ import { rootReducer } from './reducers';
 
 // @styles
 import './index.css';
+import 'font-awesome/css/font-awesome.css';
 
 // @components
 import App from './App';

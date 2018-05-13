@@ -1,0 +1,13 @@
+.App {
+    height: 100vh;
+
+    .md-grid {
+        height: 100vh;
+
+        .md-cell {
+            .ace_editor {
+                height: 100vh !important;
+            }
+        }
+    }
+}

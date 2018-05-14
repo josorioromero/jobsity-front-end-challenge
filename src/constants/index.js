@@ -44,6 +44,24 @@ export const MOCK_ATTRIBUTES = [
         description: 'Mock_description_2',
         dataType: DATA_TYPES.STRING,
         format: FORMATS.NONE,
+        category: CATEGORIES.COMMANDS,
+        enumerations: [
+            'foo',
+            'bar'
+        ],
+        min: null,
+        max: null,
+        unitOfMeasurement: null,
+        precision: null,
+        accuracy: null,
+        defaultValue: '',
+        device: ''
+    },
+    {
+        name: 'Mock_device_3',
+        description: 'Mock_description_3',
+        dataType: DATA_TYPES.STRING,
+        format: FORMATS.NONE,
         category: CATEGORIES.DEVICE_INFO,
         enumerations: [
             'foo',

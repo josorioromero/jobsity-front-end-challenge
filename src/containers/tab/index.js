@@ -1,5 +1,6 @@
 // @vendors
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
@@ -10,6 +11,14 @@ import TabsBoard from '../../components/tabs-board';
 import { changeActiveTab, createNewAttribute } from '../../actions';
 
 const TabContainer = props => <TabsBoard {...props} />
+
+TabContainer.propTypes = {
+    attributes: PropTypes.array
+};
+
+TabContainer.defaultProps = {
+    attributes: []
+};
 
 const mapDispatchToProps = dispatch => bindActionCreators({
     changeActiveTab,

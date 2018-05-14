@@ -44,7 +44,7 @@ export const MOCK_ATTRIBUTES = [
         description: 'Mock_description_2',
         dataType: DATA_TYPES.STRING,
         format: FORMATS.NONE,
-        category: CATEGORIES.DEVICE_INFO,
+        category: CATEGORIES.COMMANDS,
         enumerations: [
             'foo',
             'bar'

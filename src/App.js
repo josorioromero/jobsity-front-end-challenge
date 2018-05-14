@@ -23,15 +23,15 @@ class App extends Component {
 
     render() {
         const { attributesState } = this.props;
-        const json = attributesState.get('attributesList').toJS();
+        const attributesList = attributesState.get('attributesList').toJS();
         return (
             <div className="App">
                 <Grid>
                     <Cell size={8}>
-                        <TabContainer />
+                        <TabContainer attributes={attributesList} />
                     </Cell>
                     <Cell size={4}>
-                        <Editor json={json} />
+                        <Editor json={attributesList} />
                     </Cell>
                 </Grid>
             </div>

@@ -1,7 +1,6 @@
 // @vendors
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
 
 // @components
 import {
@@ -13,6 +12,7 @@ import {
 import ExpansionItem from '../expansion-item';
 
 const TabsBoard = ({
+    attributesList,
     changeActiveTab,
     createNewAttribute
 }) => (
@@ -55,8 +55,13 @@ const TabsBoard = ({
 );
 
 TabsBoard.propTypes = {
+    attributesList: PropTypes.array,
     changeActiveTab: PropTypes.func.isRequired,
     createNewAttribute: PropTypes.func.isRequired
+};
+
+TabsBoard.defaultProps = {
+    attributesList: []
 };
 
 export default TabsBoard;

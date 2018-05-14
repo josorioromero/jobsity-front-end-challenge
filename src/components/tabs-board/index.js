@@ -1,6 +1,7 @@
 // @vendors
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
 // @components
 import {
@@ -9,6 +10,7 @@ import {
     Tabs,
     TabsContainer
 } from 'react-md';
+import ExpansionItem from '../expansion-item';
 
 const TabsBoard = ({
     changeActiveTab,
@@ -24,7 +26,7 @@ const TabsBoard = ({
         >
             <Tabs tabId="simple-tab">
                 <Tab label="Device Info">
-                    <h3>Device Info</h3>
+                    <ExpansionItem />
                 </Tab>
                 <Tab label="Sensors">
                     <h3>Sensors</h3>

@@ -21,11 +21,11 @@ const Editor = ({ json }) => (
 );
 
 Editor.propTypes = {
-    json: PropTypes.string
+    json: PropTypes.array
 };
 
 Editor.defaultProps = {
-    json: ''
+    json: []
 };
 
 export default Editor;

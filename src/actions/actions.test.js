@@ -5,12 +5,14 @@ import { fromJS } from 'immutable';
 
 // @actions
 import {
-    CHANGE_ACTIVE_TAB,
-    LOAD_DEFAULT_ATTRIBUTES,
     CREATE_NEW_ATTRIBUTE,
+    CHANGE_ACTIVE_TAB,
+    DELETE_ATTRIBUTE,
+    LOAD_DEFAULT_ATTRIBUTES,
     changeActiveTab,
-    loadDefaultAttributes,
-    createNewAttribute
+    createNewAttribute,
+    deleteAttribute,
+    loadDefaultAttributes
 } from './index';
 
 // @constants
@@ -74,6 +76,7 @@ describe('actions test suite', () => {
 
     context('when createNewAttribute is called', () => {
         let store;
+        const attributeId = Math.random();
 
         beforeAll(() => {
             store = mockStore({
@@ -85,17 +88,48 @@ describe('actions test suite', () => {
                 })
             });
 
-            store.dispatch(createNewAttribute());
+            store.dispatch(createNewAttribute(attributeId));
         });
 
         it('should dispatch CREATE_NEW_ATTRIBUTE action', () => {
             const expectedAction = {
                 type: CREATE_NEW_ATTRIBUTE,
-                payload: TABS_ENUM[0]
+                payload: {
+                    id: attributeId,
+                    category: TABS_ENUM[0]
+                }
             };
             const dispatchedActions = store.getActions();
             expect(dispatchedActions).toHaveLength(1);
             expect(dispatchedActions).toContainEqual(expectedAction);
+        });
+    });
+
+    context('when deleteAttribute is called', () => {
+        let store;
+        const attributeId = 1;
+
+        beforeAll(() => {
+            store = mockStore({
+                attributes: fromJS({
+                    attributesList: MOCK_ATTRIBUTES,
+                }),
+                tabs: fromJS({
+                    activeTab: TABS_ENUM[0]
+                })
+            });
+
+            store.dispatch(deleteAttribute(attributeId));
+        });
+
+        it('should dispatch DELETE_ATTRIBUTE action', () => {
+            const expectedAction = {
+                type: DELETE_ATTRIBUTE,
+                payload: attributeId
+            };
+            const dispatchedAction = store.getActions();
+            expect(dispatchedAction).toHaveLength(1);
+            expect(dispatchedAction).toContainEqual(expectedAction);
         });
     });
 });

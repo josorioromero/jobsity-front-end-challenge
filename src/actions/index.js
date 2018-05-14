@@ -17,12 +17,23 @@ export const loadDefaultAttributes = () =>
         });
 
 export const CREATE_NEW_ATTRIBUTE = 'CREATE_NEW_ATTRIBUTE';
-export const createNewAttribute = () =>
+export const createNewAttribute = attributeId =>
     (dispatch, getState) => {
         const category = getState().tabs.get('activeTab');
 
         dispatch({
             type: CREATE_NEW_ATTRIBUTE,
-            payload: category
+            payload: {
+                id: attributeId || Math.random(),
+                category
+            }
         });
     };
+
+export const DELETE_ATTRIBUTE = 'DELETE_ATTRIBUTE';
+export const deleteAttribute = id =>
+    dispatch =>
+        dispatch({
+            type: DELETE_ATTRIBUTE,
+            payload: id
+        });

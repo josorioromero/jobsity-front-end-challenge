@@ -22,6 +22,7 @@ export const FORMATS = {
 
 export const MOCK_ATTRIBUTES = [
     {
+        id: 1,
         name: 'Mock_device_1',
         description: 'Mock_description_1',
         dataType: DATA_TYPES.STRING,
@@ -40,6 +41,7 @@ export const MOCK_ATTRIBUTES = [
         device: ''
     },
     {
+        id: 2,
         name: 'Mock_device_2',
         description: 'Mock_description_2',
         dataType: DATA_TYPES.STRING,
@@ -58,6 +60,7 @@ export const MOCK_ATTRIBUTES = [
         device: ''
     },
     {
+        id: 3,
         name: 'Mock_device_3',
         description: 'Mock_description_3',
         dataType: DATA_TYPES.STRING,
@@ -78,6 +81,7 @@ export const MOCK_ATTRIBUTES = [
 ];
 
 export const SEED_ATTRIBUTE = {
+    id: null,
     name: '',
     description: '',
     dataType: DATA_TYPES.STRING,

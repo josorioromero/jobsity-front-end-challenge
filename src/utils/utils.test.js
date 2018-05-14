@@ -37,6 +37,7 @@ describe('filterAttributesList', () => {
             const category = CATEGORIES.COMMANDS;
             const expected = [
                 {
+                    id: 2,
                     name: 'Mock_device_2',
                     description: 'Mock_description_2',
                     dataType: 'STRING',

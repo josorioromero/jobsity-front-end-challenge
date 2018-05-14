@@ -31,6 +31,8 @@ class AttributesForm extends Component {
             'attributes-form__input',
         );
 
+        const { attribute } = this.state;
+
         return (
             <div className="attributes-form">
                 <Grid>
@@ -41,6 +43,7 @@ class AttributesForm extends Component {
                             label="Name"
                             lineDirection="center"
                             placeholder="Type a name"
+                            value={attribute.name}
                         />
                     </Cell>
                     <Cell size={8}>
@@ -50,6 +53,7 @@ class AttributesForm extends Component {
                             label="Description"
                             lineDirection="center"
                             placeholder="Type a description"
+                            value={attribute.description}
                         />
                     </Cell>
                 </Grid>
@@ -72,6 +76,7 @@ class AttributesForm extends Component {
                             label="Default Value"
                             lineDirection="center"
                             placeholder="Type a default value"
+                            value={attribute.defaultValue}
                         />
                     </Cell>
                 </Grid>
@@ -84,7 +89,7 @@ class AttributesForm extends Component {
                             label="Data Type"
                             menuItems={Object.values(DATA_TYPES)}
                             placeholder="Select a data type"
-                            simplifiedMenu
+                            value={attribute.dataType}
                         />
 
                         <SelectField
@@ -93,6 +98,7 @@ class AttributesForm extends Component {
                             label="Format"
                             menuItems={Object.values(FORMATS)}
                             placeholder="Select a format"
+                            value={attribute.format}
                         />
                     </Cell>
                 </Grid>

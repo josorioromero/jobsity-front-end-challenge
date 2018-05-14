@@ -34,7 +34,10 @@ const TabsBoard = ({
                 <Tab label="Device Info">
                     <AttributesList
                         key={1}
-                        attributes={attributes}
+                        attributes={filterAttributesList(
+                            attributes,
+                            CATEGORIES.DEVICE_INFO
+                        )}
                     />
                 </Tab>
                 <Tab label="Sensors">

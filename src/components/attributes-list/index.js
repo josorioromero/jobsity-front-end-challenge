@@ -13,8 +13,8 @@ const AttributesList = ({ attributes }) => (
                 <ExpansionPanel
                     key={index}
                     closeOnCancel={false}
-                    label="Main label"
-                    secondaryLabel="Secondary label"
+                    label={`Name: ${attribute.name}`}
+                    secondaryLabel={`Description: ${attribute.description}`}
                     saveProps={{
                         flat: false,
                         raised: true,

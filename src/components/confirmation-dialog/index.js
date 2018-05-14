@@ -1,5 +1,8 @@
+// @vendors
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+
+// @components
 import { Button, DialogContainer } from 'react-md';
 
 class ConfirmationDialog extends PureComponent {

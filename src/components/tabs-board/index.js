@@ -26,7 +26,28 @@ class TabsBoard extends PureComponent {
             attributeName: '',
             isConfirmationVisible: false
         }
+
+        this.buildTabs = this.buildTabs.bind(this);
+        this.onCancelClick = this.onCancelClick.bind(this);
         this.onDeleteItemClick = this.onDeleteItemClick.bind(this);
+    }
+
+    buildTabs() {
+        const { attributes } = this.props;
+        const tabList = Object.keys(CATEGORIES);
+
+        return tabList.map((category, index) => (
+            <Tab key={index} label={category}>
+                <AttributesList
+                    key={index}
+                    attributes={filterAttributesList(
+                        attributes,
+                        category
+                    )}
+                    onDeleteClick={this.onDeleteItemClick}
+                />
+            </Tab>
+        ));
     }
 
     onDeleteItemClick(attributeId, attributeName) {
@@ -53,7 +74,6 @@ class TabsBoard extends PureComponent {
 
     render() {
         const {
-            attributes,
             changeActiveTab,
             createNewAttribute
         } = this.props;
@@ -80,56 +100,7 @@ class TabsBoard extends PureComponent {
                     onTabChange={activeTabIndex => changeActiveTab(activeTabIndex)}
                 >
                     <Tabs tabId="simple-tab">
-                        <Tab label="Device Info">
-                            <AttributesList
-                                key={1}
-                                attributes={filterAttributesList(
-                                    attributes,
-                                    CATEGORIES.DEVICE_INFO
-                                )}
-                                onDeleteClick={this.onDeleteItemClick}
-                            />
-                        </Tab>
-                        <Tab label="Sensors">
-                            <AttributesList
-                                key={2}
-                                attributes={filterAttributesList(
-                                    attributes,
-                                    CATEGORIES.SENSORS
-                                )}
-                                onDeleteClick={this.onDeleteItemClick}
-                            />
-                        </Tab>
-                        <Tab label="Settings">
-                            <AttributesList
-                                key={3}
-                                attributes={filterAttributesList(
-                                    attributes,
-                                    CATEGORIES.SETTINGS
-                                )}
-                                onDeleteClick={this.onDeleteItemClick}
-                            />
-                        </Tab>
-                        <Tab label="Commands">
-                            <AttributesList
-                                key={4}
-                                attributes={filterAttributesList(
-                                    attributes,
-                                    CATEGORIES.COMMANDS
-                                )}
-                                onDeleteClick={this.onDeleteItemClick}
-                            />
-                        </Tab>
-                        <Tab label="Metadata">
-                            <AttributesList
-                                key={5}
-                                attributes={filterAttributesList(
-                                    attributes,
-                                    CATEGORIES.METADATA
-                                )}
-                                onDeleteClick={this.onDeleteItemClick}
-                            />
-                        </Tab>
+                        { this.buildTabs() }
                     </Tabs>
                 </TabsContainer>
 

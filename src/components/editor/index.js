@@ -1,5 +1,8 @@
 // @vendors
 import React from 'react';
+import PropTypes from 'prop-types';
+
+// @components
 import AceEditor from 'react-ace';
 
 // @themes
@@ -16,5 +19,13 @@ const Editor = ({ json }) => (
         value={JSON.stringify(json, null, '\t')}
     />
 );
+
+Editor.propTypes = {
+    json: PropTypes.string
+};
+
+Editor.defaultProps = {
+    json: ''
+};
 
 export default Editor;

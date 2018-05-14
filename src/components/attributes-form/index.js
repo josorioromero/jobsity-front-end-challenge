@@ -22,7 +22,7 @@ class AttributesForm extends Component {
         super(props);
 
         this.state = {
-            attribute: {}
+            attribute: this.props.attribute
         }
     };
 

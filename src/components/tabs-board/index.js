@@ -2,6 +2,9 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
+// @constants
+import { CATEGORIES } from '../../constants';
+
 // @components
 import {
     Button,
@@ -9,10 +12,13 @@ import {
     Tabs,
     TabsContainer
 } from 'react-md';
-import ExpansionItem from '../expansion-item';
+import AttributesList from '../attributes-list';
+
+// @utils
+import { filterAttributesList } from '../../utils';
 
 const TabsBoard = ({
-    attributesList,
+    attributes,
     changeActiveTab,
     createNewAttribute
 }) => (
@@ -26,19 +32,46 @@ const TabsBoard = ({
         >
             <Tabs tabId="simple-tab">
                 <Tab label="Device Info">
-                    <ExpansionItem />
+                    <AttributesList
+                        key={1}
+                        attributes={attributes}
+                    />
                 </Tab>
                 <Tab label="Sensors">
-                    <h3>Sensors</h3>
+                    <AttributesList
+                        key={2}
+                        attributes={filterAttributesList(
+                            attributes,
+                            CATEGORIES.SENSORS
+                        )}
+                    />
                 </Tab>
                 <Tab label="Settings">
-                    <h3>Settings</h3>
+                    <AttributesList
+                        key={3}
+                        attributes={filterAttributesList(
+                            attributes,
+                            CATEGORIES.SETTINGS
+                        )}
+                    />
                 </Tab>
                 <Tab label="Commands">
-                    <h3>Commands</h3>
+                    <AttributesList
+                        key={4}
+                        attributes={filterAttributesList(
+                            attributes,
+                            CATEGORIES.COMMANDS
+                        )}
+                    />
                 </Tab>
                 <Tab label="Metadata">
-                    <h3>Metadata</h3>
+                    <AttributesList
+                        key={5}
+                        attributes={filterAttributesList(
+                            attributes,
+                            CATEGORIES.METADATA
+                        )}
+                    />
                 </Tab>
             </Tabs>
         </TabsContainer>
@@ -55,13 +88,13 @@ const TabsBoard = ({
 );
 
 TabsBoard.propTypes = {
-    attributesList: PropTypes.array,
+    attributes: PropTypes.array,
     changeActiveTab: PropTypes.func.isRequired,
     createNewAttribute: PropTypes.func.isRequired
 };
 
 TabsBoard.defaultProps = {
-    attributesList: []
+    attributes: []
 };
 
 export default TabsBoard;

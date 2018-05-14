@@ -16,10 +16,6 @@ TabContainer.propTypes = {
     attributes: PropTypes.array
 };
 
-TabContainer.defaultProps = {
-    attributes: []
-};
-
 const mapDispatchToProps = dispatch => bindActionCreators({
     changeActiveTab,
     createNewAttribute

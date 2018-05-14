@@ -8,7 +8,11 @@ import { bindActionCreators } from 'redux';
 import TabsBoard from '../../components/tabs-board';
 
 // @actions
-import { changeActiveTab, createNewAttribute } from '../../actions';
+import {
+    changeActiveTab,
+    createNewAttribute,
+    deleteAttribute
+} from '../../actions';
 
 const TabContainer = props => <TabsBoard {...props} />
 
@@ -18,7 +22,8 @@ TabContainer.propTypes = {
 
 const mapDispatchToProps = dispatch => bindActionCreators({
     changeActiveTab,
-    createNewAttribute
+    createNewAttribute,
+    deleteAttribute
 }, dispatch);
 
 export default connect(null, mapDispatchToProps)(TabContainer);

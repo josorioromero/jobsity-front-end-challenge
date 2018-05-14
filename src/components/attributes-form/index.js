@@ -42,6 +42,7 @@ class AttributesForm extends Component {
                             id="attribute-name-input"
                             label="Name"
                             lineDirection="center"
+                            onChange={() => {}}
                             placeholder="Type a name"
                             value={attribute.name}
                         />
@@ -52,6 +53,7 @@ class AttributesForm extends Component {
                             id="attribute-description-input"
                             label="Description"
                             lineDirection="center"
+                            onChange={() => {}}
                             placeholder="Type a description"
                             value={attribute.description}
                         />
@@ -75,6 +77,7 @@ class AttributesForm extends Component {
                             id="attribute-default-value-input"
                             label="Default Value"
                             lineDirection="center"
+                            onChange={() => {}}
                             placeholder="Type a default value"
                             value={attribute.defaultValue}
                         />
@@ -88,6 +91,7 @@ class AttributesForm extends Component {
                             id="attribute-data-type-select"
                             label="Data Type"
                             menuItems={Object.values(DATA_TYPES)}
+                            onChange={() => {}}
                             placeholder="Select a data type"
                             value={attribute.dataType}
                         />
@@ -97,6 +101,7 @@ class AttributesForm extends Component {
                             id="attribute-format-select"
                             label="Format"
                             menuItems={Object.values(FORMATS)}
+                            onChange={() => {}}
                             placeholder="Select a format"
                             value={attribute.format}
                         />
